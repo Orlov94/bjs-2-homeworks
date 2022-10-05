@@ -27,11 +27,11 @@ Student.prototype.addMark = function(mark) {
   }
 
   Student.prototype.getAverage = function (){
-    let avg = o;
+    let avgGrades = 0;
     for (i = 0; i < this.marks.length; i++){
-      avg = avg + this.marks.length;
+      avgGrades = avgGrades + this.marks.length;
     }
-    return avg / this.marks.length;
+    return avgGrades / this.marks.length;
 
   }
 
