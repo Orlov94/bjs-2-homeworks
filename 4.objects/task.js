@@ -13,9 +13,31 @@ Student.prototype.setSubject = function(subjectName) {
 }
 Student.prototype.addMark = function(mark) {
   if(this.marks === undefined){
-    this.marks = mark;
+    this.marks = [mark];
   }else{
-    Student.prototype.addMarks = function (...mark){
+    this.marks.push(mark)
     }
   }
-}
+  Student.prototype.addMarks = function (...mark){
+    if(this.marks ===undefined){
+      this.marks = [...mark];
+    } else{
+      this.marks.push(...mark);
+    }
+  }
+
+  Student.prototype.getAverage = function (){
+    let avg = o;
+    for (i = 0; i < this.marks.length; i++){
+      avg = avg + this.marks.length;
+    }
+    return avg / this.marks.length;
+
+  }
+
+  Student.prototype.exclude = function (reason){
+    delete this.subject;
+    delete this.marks;
+    this.excluded = reason;
+  }
+  
