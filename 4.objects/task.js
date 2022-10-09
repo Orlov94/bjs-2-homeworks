@@ -15,21 +15,21 @@ Student.prototype.addMark = function(mark) {
   if(this.marks === undefined){
     this.marks = [mark];
   }else{
-    this.marks.push(mark)
+    this.marks.push(mark) = mark;
     }
   }
   Student.prototype.addMarks = function (...mark){
     if(this.marks ===undefined){
       this.marks = [...mark];
     } else{
-      this.marks.push(...mark);
+      this.marks.push(...mark) = mark;
     }
   }
 
   Student.prototype.getAverage = function (){
     let avgGrades = 0;
     for (var i = 0; i < this.marks; i++){
-      avgGrades = avgGrades + this.marks;
+      avgGrades = avgGrades + this.marks.length;
     }
     return avgGrades / this.marks;
 
